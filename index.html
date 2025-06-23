@@ -52,10 +52,13 @@
                      </div>
                    
   <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-  <div class="menu-area">
-    <div class="limit-box">
+ <div class="container">
+  <!-- ✅ Add toggle icon here -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-      <!-- ✅ Toggle Icon Now Truly Centered -->
+  <div class="row">
+    <!-- logo_section + menu_area continues -->
+
      
 
       <nav class="main-menu">
@@ -77,48 +80,59 @@
     menu.classList.toggle('show');
   }
 </script>
-
-                     <style>
- html, body {
+<style>
+html, body {
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-    .menu-area-main {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-    }
+/* -------- Desktop Styles -------- */
+.menu-area-main {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 
-    .menu-area-main li {
-      margin: 0 10px;
-    }
+.menu-area-main li {
+  margin: 0 10px;
+}
 
-    .menu-area-main a {
-      text-decoration: none;
-      color: #5a5757;
-    }
+.menu-area-main a {
+  text-decoration: none;
+  color: #5a5757;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 26px;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
+.menu-toggle {
+  display: none;
+}
 
-    /* Responsive toggle container */
- 
-    /* Responsive Styles */
-   @media (max-width: 768px) {
+/* -------- Mobile View (max 768px) -------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    background-color: red;     /* 🔴 red bar background */
+    color: white;
+    font-size: 20px;
+    padding: 12px 16px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 999;
+  }
+
   .menu-area-main {
     flex-direction: column;
     display: none;
-    background-color:#f5b92d;
-    padding: 0px 0; /* height reduction */
+    background-color: #f5b92d;
+    padding: 10px 0;
     align-items: center;
-    gap: 8px; /* spacing between items */
+    gap: 8px;
   }
 
   .menu-area-main.show {
@@ -127,45 +141,17 @@
 
   .menu-area-main li {
     margin: 0;
-    padding: 3px 0; /* less padding per item */
+    padding: 6px 0;
   }
 
   .menu-area-main a {
-    font-size: 14px; /* smaller font size */
+    font-size: 14px;
     padding: 5px 10px;
+    color: #000;
   }
 }
-  .menu-area-main.show {
-        display: flex;
-      }
- .menu-toggle {
-        display: none;
-      }
-    @media (max-width: 768px) {
-      @media (max-width: 768px) {
-  .menu-toggle {
-    font-size: 20px;
-    padding: 4px 6px;
-    border: 1px solid #333;
-    border-radius: 0;
-  }
-}
-.menu-toggle {
-  display: inline-block;
-  font-size: 20px;       /* font size குறைத்தது */
-  cursor: pointer;
-  background: none;
-  border: 1px solid #333;
-  padding: 4px 6px;      /* padding குறைத்தது */
-  border-radius: 0;
-  box-sizing: border-box;
-  width: auto;
-  height: auto;
-  line-height: 1;
-  text-align: center;
-}
-}
- </style>
+</style>
+
   </div>
                </div>
             </div>
