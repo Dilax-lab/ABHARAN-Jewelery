@@ -89,48 +89,39 @@ html, body {
 }
 
 /* -------- Desktop Styles -------- */
+/* -------- Desktop Styles -------- */
 .menu-area-main {
   list-style: none;
   display: flex;
   padding: 0;
   margin: 0;
+  justify-content: flex-end;  /* Desktop: right-align menu */
 }
 
-.menu-area-main li {
-  margin: 0 10px;
-}
-
-.menu-area-main a {
-  text-decoration: none;
-  color: #5a5757;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-/* -------- Mobile View (max 768px) -------- */
+/* -------- Mobile View -------- */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
     width: 100%;
-    background-color: red;     /* 🔴 red bar background */
+    background-color: red;    /* Red background toggle bar */
     color: white;
-    font-size: 20px;
-    padding: 12px 16px;
+    font-size: 28px;          /* பெரிய எழுத்து */
+    padding: 16px 20px;       /* கூடுதல் padding */
     border: none;
     text-align: left;
     cursor: pointer;
     margin: 0;
     box-sizing: border-box;
-    z-index: 999;
+    height: 56px;             /* fixed height for big toggle bar */
+    line-height: 24px;
+    font-weight: 700;
   }
 
   .menu-area-main {
     flex-direction: column;
     display: none;
     background-color: #f5b92d;
-    padding: 10px 0;
+    padding: 12px 0;
     align-items: center;
     gap: 8px;
   }
@@ -141,15 +132,16 @@ html, body {
 
   .menu-area-main li {
     margin: 0;
-    padding: 6px 0;
+    padding: 8px 0;
   }
 
   .menu-area-main a {
-    font-size: 14px;
-    padding: 5px 10px;
+    font-size: 16px;           /* mobile menu items text size */
+    padding: 8px 12px;
     color: #000;
   }
 }
+
 </style>
 
   </div>
