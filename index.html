@@ -36,89 +36,62 @@
       <!-- end loader -->
       <!-- header -->
       <header>
-         <!-- header inner -->
-         <div class="header-top">
-            <div class="header">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                        <div class="full">
-                           <div class="center-desk">
-                              <div class="logo">
-                                 <a href="index.html"><img src="images/logo1.png" alt="#" /></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                   
-  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-  <div class="menu-area">
-    <div class="limit-box">
+      <!-- 🔴 Toggle Icon - Top la -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-      <!-- ✅ Toggle Icon Now Truly Centered -->
-     
+<div class="header-top">
+  <div class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Logo -->
+        <div class="col-12 text-center logo_section">
+          <div class="logo my-2">
+            <a href="index.html"><img src="images/logo1.png" alt="Logo" /></a>
+          </div>
+        </div>
 
-      <nav class="main-menu">
-        <ul class="menu-area-main" id="navMenu">
-          <li class="active"> <a href="index.html"><b>Home</b></a> </li>
-          <li> <a href="#jewellery"><b>Jewellery</b></a> </li>
-          <li> <a href="#clients"><b>Testimonial</b></a> </li>
-          <li> <a href="#contact"><b>Contact</b></a> </li>
-        </ul>
-      </nav>
-
+        <!-- Menu -->
+        <div class="col-12">
+          <nav class="main-menu">
+            <ul class="menu-area-main" id="navMenu">
+              <li class="active"><a href="index.html"><b>Home</b></a></li>
+              <li><a href="#jewellery"><b>Jewellery</b></a></li>
+              <li><a href="#clients"><b>Testimonial</b></a></li>
+              <li><a href="#contact"><b>Contact</b></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    menu.classList.toggle('show');
-  }
-</script>
-
-                     <style>
- html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+<style>
+   /* Default: hide toggle icon */
+.menu-toggle {
+  display: none;
 }
 
-    .menu-area-main {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-    }
+/* 🔻 Mobile View Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: relative; /* or fixed if needed */
+    width: 100%;
+    background-color: red;
+    color: white;
+    padding: 10px 16px;
+    font-size: 20px;
+    border: none;
+    text-align: left;
+    z-index: 9999;
+  }
 
-    .menu-area-main li {
-      margin: 0 10px;
-    }
-
-    .menu-area-main a {
-      text-decoration: none;
-      color: #5a5757;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 26px;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-
-    /* Responsive toggle container */
- 
-    /* Responsive Styles */
-   @media (max-width: 768px) {
   .menu-area-main {
-    flex-direction: column;
     display: none;
-    background-color:#f5b92d;
-    padding: 0px 0; /* height reduction */
+    flex-direction: column;
+    background-color: #f5b92d;
+    padding: 10px 0;
     align-items: center;
-    gap: 8px; /* spacing between items */
   }
 
   .menu-area-main.show {
@@ -126,49 +99,20 @@
   }
 
   .menu-area-main li {
-    margin: 0;
-    padding: 3px 0; /* less padding per item */
+    padding: 5px 0;
   }
 
-  .menu-area-main a {
-    font-size: 14px; /* smaller font size */
-    padding: 5px 10px;
+  .logo img {
+    max-width: 150px;
+  }
+
+  .logo_section {
+    text-align: center;
+    margin-top: 10px;
   }
 }
-  .menu-area-main.show {
-        display: flex;
-      }
- .menu-toggle {
-        display: none;
-      }
-    @media (max-width: 768px) {
-      @media (max-width: 768px) {
-  .menu-toggle {
-    font-size: 20px;
-    padding: 4px 6px;
-    border: 1px solid #333;
-    border-radius: 0;
-  }
-}
-.menu-toggle {
-  display: inline-block;
-  font-size: 20px;       /* font size குறைத்தது */
-  cursor: pointer;
-  background: none;
-  border: 1px solid #333;
-  padding: 4px 6px;      /* padding குறைத்தது */
-  border-radius: 0;
-  box-sizing: border-box;
-  width: auto;
-  height: auto;
-  line-height: 1;
-  text-align: center;
-}
-}
- </style>
-  </div>
-               </div>
-            </div>
+
+</style>
             <!-- end header inner -->
             <!-- end header -->
             <section class="slider_section">
