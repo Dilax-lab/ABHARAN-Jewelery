@@ -37,6 +37,7 @@
       <!-- header -->
       <header>
     <!-- header inner -->
+       <!-- header inner -->
          <div class="header-top">
             <div class="header">
                <div class="container">
@@ -52,13 +53,10 @@
                      </div>
                    
   <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
- <div class="container">
-  <!-- ✅ Add toggle icon here -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <div class="menu-area">
+    <div class="limit-box">
 
-  <div class="row">
-    <!-- logo_section + menu_area continues -->
-
+      <!-- ✅ Toggle Icon Now Truly Centered -->
      
 
       <nav class="main-menu">
@@ -80,50 +78,48 @@
     menu.classList.toggle('show');
   }
 </script>
-<style>
-html, body {
+
+                     <style>
+ html, body {
   max-width: 100%;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
 }
 
-/* -------- Desktop Styles -------- */
-/* -------- Desktop Styles -------- */
-.menu-area-main {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  justify-content: flex-end;  /* Desktop: right-align menu */
-}
+    .menu-area-main {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
 
-/* -------- Mobile View -------- */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    width: 100%;
-    background-color: red;    /* Red background toggle bar */
-    color: white;
-    font-size: 28px;          /* பெரிய எழுத்து */
-    padding: 16px 20px;       /* கூடுதல் padding */
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    margin: 0;
-    box-sizing: border-box;
-    height: 56px;             /* fixed height for big toggle bar */
-    line-height: 24px;
-    font-weight: 700;
-  }
+    .menu-area-main li {
+      margin: 0 10px;
+    }
 
+    .menu-area-main a {
+      text-decoration: none;
+      color: #5a5757;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Responsive toggle container */
+ 
+    /* Responsive Styles */
+   @media (max-width: 768px) {
   .menu-area-main {
     flex-direction: column;
     display: none;
-    background-color: #f5b92d;
-    padding: 12px 0;
+    background-color:#f5b92d;
+    padding: 0px 0; /* height reduction */
     align-items: center;
-    gap: 8px;
+    gap: 8px; /* spacing between items */
   }
 
   .menu-area-main.show {
@@ -132,18 +128,45 @@ html, body {
 
   .menu-area-main li {
     margin: 0;
-    padding: 8px 0;
+    padding: 3px 0; /* less padding per item */
   }
 
   .menu-area-main a {
-    font-size: 16px;           /* mobile menu items text size */
-    padding: 8px 12px;
-    color: #000;
+    font-size: 14px; /* smaller font size */
+    padding: 5px 10px;
   }
 }
-
-</style>
-
+  .menu-area-main.show {
+        display: flex;
+      }
+ .menu-toggle {
+        display: none;
+      }
+    @media (max-width: 768px) {
+      @media (max-width: 768px) {
+  .menu-toggle {
+    font-size: 20px;
+    padding: 4px 6px;
+    border: 1px solid #333;
+    border-radius: 0;
+  }
+}
+.menu-toggle {
+  display: inline-block;
+  font-size: 20px;       /* font size குறைத்தது */
+  cursor: pointer;
+  background: none;
+  border: 1px solid #333;
+  padding: 4px 6px;      /* padding குறைத்தது */
+  border-radius: 0;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  line-height: 1;
+  text-align: center;
+}
+}
+ </style>
   </div>
                </div>
             </div>
