@@ -26,6 +26,12 @@
      top: 12px;
      width: 26px;
 }
+.meanmenu-reveal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
  .mean-container a.meanmenu-reveal span {
      background: #ffffff none repeat scroll 0 0;
      border-radius: 0;
